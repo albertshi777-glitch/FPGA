@@ -1,0 +1,58 @@
+`timescale 1ns/1ps
+
+module tb_ball_wall_collision();
+
+    reg artificial_vga_clk;
+    reg artificial_sys_rst_n;
+
+    reg signed [10:0] artificial_ball_x_in;
+    reg signed [10:0] artificial_ball_y_in;
+    reg signed [5:0]  artificial_vx_in;
+    reg signed [5:0]  artificial_vy_in;
+
+    wire signed [10:0] recorder_ball_x_out;
+    wire signed [10:0] recorder_ball_y_out;
+    wire signed [5:0]  recorder_vx_out;
+    wire signed [5:0]  recorder_vy_out;
+
+    initial begin
+        artificial_vga_clk   <= 1'b0;
+        artificial_sys_rst_n <= 1'b0;
+        artificial_ball_x_in <= 11'd320;
+        artificial_ball_y_in <= 11'd240;
+        artificial_vx_in     <= 6'd4;
+        artificial_vy_in     <= 6'd4;
+        #200;
+        artificial_sys_rst_n <= 1'b1;
+    end
+
+    always #20 artificial_vga_clk <= ~artificial_vga_clk;
+
+    always @(posedge artificial_vga_clk or negedge artificial_sys_rst_n) begin
+        if (!artificial_sys_rst_n)
+            artificial_ball_x_in <= 11'd320;
+        else
+            artificial_ball_x_in <= recorder_ball_x_out;
+    end
+
+    always @(posedge artificial_vga_clk or negedge artificial_sys_rst_n) begin
+        if (!artificial_sys_rst_n)
+            artificial_ball_y_in <= 11'd240;
+        else
+            artificial_ball_y_in <= recorder_ball_y_out;
+    end
+
+    ball_wall_collision ball_wall_collision_inst(
+        .vga_clk   (artificial_vga_clk),
+        .sys_rst_n (artificial_sys_rst_n),
+        .ball_x_in (artificial_ball_x_in),
+        .ball_y_in (artificial_ball_y_in),
+        .vx_in     (artificial_vx_in),
+        .vy_in     (artificial_vy_in),
+        .ball_x_out(recorder_ball_x_out),
+        .ball_y_out(recorder_ball_y_out),
+        .vx_out    (recorder_vx_out),
+        .vy_out    (recorder_vy_out)
+    );
+
+endmodule
