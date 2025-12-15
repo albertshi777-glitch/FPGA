@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/FPGA/project/Quartus_prj/simulation/questa
+T_opt
+!s110 1763138851
+V=a3NVD4ZU]KPSk6JkJ;:]1
+04 24 4 work tb_ball_bricks_collision fast 0
+=1-98597aaf6581-69175d22-21f-afc
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vball_bricks_collision
+2D:/FPGA/project/RTL/ball_bricks_collision.v
+Z3 !s110 1763138849
+!i10b 1
+!s100 e4]F[@[P6k@MHk=H6`nhj0
+Ib97=o?<`7zi`]CEddeGe61
+R1
+w1763138810
+8D:/FPGA/project/RTL/ball_bricks_collision.v
+FD:/FPGA/project/RTL/ball_bricks_collision.v
+!i122 0
+L0 2 131
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1763138848.000000
+!s107 D:/FPGA/project/RTL/ball_bricks_collision.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/project/RTL|D:/FPGA/project/RTL/ball_bricks_collision.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/FPGA/project/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_ball_bricks_collision
+2D:/FPGA/project/Quartus_prj/../sim/tb_ball_bricks_collision.v
+R3
+!i10b 1
+!s100 06n_2XKO5fojZzYUU5AcQ1
+ID``:1m7K63A_b]O]3RTI93
+R1
+w1763138636
+8D:/FPGA/project/Quartus_prj/../sim/tb_ball_bricks_collision.v
+FD:/FPGA/project/Quartus_prj/../sim/tb_ball_bricks_collision.v
+!i122 2
+L0 2 128
+R4
+R5
+r1
+!s85 0
+31
+!s108 1763138849.000000
+!s107 D:/FPGA/project/Quartus_prj/../sim/tb_ball_bricks_collision.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/project/Quartus_prj/../sim|D:/FPGA/project/Quartus_prj/../sim/tb_ball_bricks_collision.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/FPGA/project/Quartus_prj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
