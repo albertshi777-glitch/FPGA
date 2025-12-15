@@ -1,0 +1,6 @@
+
+State Machine - |vga_pic|local_mode_sel
+Name local_mode_sel.GET_START local_mode_sel.GET_END local_mode_sel.GET_GAME 
+local_mode_sel.GET_START 0 0 0 
+local_mode_sel.GET_GAME 1 0 1 
+local_mode_sel.GET_END 1 1 0 
